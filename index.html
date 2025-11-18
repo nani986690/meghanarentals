@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff6e6" />
+  <title>Meghana Bridal Dresses - Women’s Wear</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Meghana Rental Dresses" class="site-logo" />
+      <span>Meghana Bridal Dresses</span>
+    </div>
+    <nav>
+      <a href="index.html" class="active">WOMEN'S WEAR</a>
+      <a href="men.html">MEN'S WEAR</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <img src="https://res.cloudinary.com/dhczjpyux/image/upload/v1763276728/f1/ohxngwbvncnz7ul4u2cy.jpg" alt="Wedding couple" />
+    <div class="hero-text">
+      <p>Eyebrow text to label this content</p>
+      <h1>A bold headline that delivers</h1>
+      <button>View Collection</button>
+    </div>
+  </section>
+
+  <section class="filters">
+    <h2>FILTER PRODUCTS</h2>
+    <label>
+      Price:
+      <select id="priceFilter">
+        <option value="all">All</option>
+        <option value="under9000">Under ₹9000</option>
+        <option value="9000to10000">₹9000 - ₹10000</option>
+      </select>
+    </label>
+  </section>
+
+  <main>
+    <h2>WOMEN’S WEAR</h2>
+    <div id="products" class="product-grid">
+      <!-- Products rendered by JS -->
+    </div>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCartBtn" style="background:none; border:none; font-size:24px; cursor:pointer;">×</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <!-- Cart items will be rendered here -->
+    </div>
+    <div class="cart-footer">
+      <div id="emptyCart" class="empty-cart" style="display:none;">
+        <p>Your cart is empty</p>
+        <button class="btn btn-ghost" onclick="document.getElementById('cartSidebar').classList.remove('open')">Continue Shopping</button>
+      </div>
+      <div id="cartSummary" style="display:none;">
+        <div class="summary-row">
+          <span>Total Items:</span>
+          <span id="totalItems">0</span>
+        </div>
+        <div class="summary-row">
+          <span>Total Rent:</span>
+          <span id="totalRent">₹0</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total Amount:</span>
+          <span id="totalAmount">₹0</span>
+        </div>
+        <button id="checkoutBtn" class="btn btn-primary checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <a href="cart.html" id="openCartBtn" class="open-cart-btn">Cart (0)</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
