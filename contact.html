@@ -1,30 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#fff6e6" />
-  <title>Contact - Meghana Bridal Dresses</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Meghana Rental Dresses" class="site-logo" />
-      <span>Meghana Bridal Dresses</span>
-    </div>
-    <nav>
-      <a href="index.html">WOMEN'S WEAR</a>
-      <a href="men.html">MEN'S WEAR</a>
-      <a href="about.html">ABOUT</a>
-      <a href="contact.html" class="active">CONTACT</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Meghana Rental Dresses — Contact Us</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./added-styles.css" />
 
-  <main class="page-content">
-    <h1>Contact Us</h1>
-    <p>Email: info@meghanabridaldresses.com</p>
-    <p>Phone: +91 98765 43210</p>
-  </main>
-</body>
+    <style>
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 1rem auto;
+      }
+      main {
+        padding: 2rem 0;
+      }
+
+      .card {
+        background: var(--card);
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 2rem;
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+
+        @media (min-width: 920px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        gap: 1rem;
+        margin: 2rem auto;
+      }
+
+      .contact-card {
+        background: linear-gradient(135deg, var(--bg) 0%, #ffffff 100%);
+        padding: 0.5rem;
+        border-radius: 12px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        cursor: pointer;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        border-color: var(--gold);
+      }
+
+      .contact-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .contact-card h3 {
+        color: var(--dark);
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .contact-card p {
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin: 0;
+      }
+
+      .contact-detail {
+        color: var(--gold);
+        font-weight: 600;
+        margin-top: 0.3rem;
+        word-break: break-word;
+        font-size: 0.8rem;
+      }
+
+      .map-section {
+        margin-top: 2rem;
+      }
+
+      .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 1.5rem;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+      }
+
+      .address-box {
+        background: var(--bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--gold);
+        margin-top: 1rem;
+      }
+
+      .address-box h4 {
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .address-box p {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .info-text {
+        text-align: center;
+        color: var(--muted);
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 768px) {
+        header .container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav {
+          justify-content: center;
+          font-size: 0.85rem;
+          gap: 1rem;
+        }
+
+        .card {
+          padding: 1.5rem;
+        }
+
+        .stitle {
+          font-size: 1.5rem;
+        }
+
+        .contact-methods {
+          grid-template-columns: 1fr;
+        }
+
+        .map-container iframe {
+          height: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Meghana Rental Dresses" class="site-logo" />
+        <span>
+          <span class="stext-hero-w">Meghana </span>
+          <span class="stext-hero-w">Bridal </span>
+          <span class="stext-hero-w">Dresses</span>
+        </span>
+      </div>
+      <nav>
+        <a href="index.html">WOMEN'S WEAR</a>
+        <a href="men.html">MEN'S WEAR</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html" class="active">CONTACT</a>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="card">
+        <div class="stitle-wrapper">
+          <h1 class="stitle">Get in Touch</h1>
+        </div>
+
+        <p class="info-text">
+          Choose your preferred way to reach us. We're here to help with your
+          dress rental needs!
+        </p>
+
+        <div class="contact-methods" id="contactMethods">
+          <!-- Contact cards will be inserted here by JavaScript -->
+        </div>
+
+        <div class="map-section">
+          <div class="stitle-wrapper" style="margin-bottom: 1rem">
+            <h2 class="stitle">Visit Our Store</h2>
+          </div>
+
+          <div class="" style="text-align: center">
+            <h4 style="color: var(--gold); margin-bottom: 1rem">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#48b564"
+                  d="M35.76,26.36h0.01c0,0-3.77,5.53-6.94,9.64c-2.74,3.55-3.54,6.59-3.77,8.06	C24.97,44.6,24.53,45,24,45s-0.97-0.4-1.06-0.94c-0.23-1.47-1.03-4.51-3.77-8.06c-0.42-0.55-0.85-1.12-1.28-1.7L28.24,22l8.33-9.88	C37.49,14.05,38,16.21,38,18.5C38,21.4,37.17,24.09,35.76,26.36z"
+                ></path>
+                <path
+                  fill="#fcc60e"
+                  d="M28.24,22L17.89,34.3c-2.82-3.78-5.66-7.94-5.66-7.94h0.01c-0.3-0.48-0.57-0.97-0.8-1.48L19.76,15	c-0.79,0.95-1.26,2.17-1.26,3.5c0,3.04,2.46,5.5,5.5,5.5C25.71,24,27.24,23.22,28.24,22z"
+                ></path>
+                <path
+                  fill="#2c85eb"
+                  d="M28.4,4.74l-8.57,10.18L13.27,9.2C15.83,6.02,19.69,4,24,4C25.54,4,27.02,4.26,28.4,4.74z"
+                ></path>
+                <path
+                  fill="#ed5748"
+                  d="M19.83,14.92L19.76,15l-8.32,9.88C10.52,22.95,10,20.79,10,18.5c0-3.54,1.23-6.79,3.27-9.3	L19.83,14.92z"
+                ></path>
+                <path
+                  fill="#5695f6"
+                  d="M28.24,22c0.79-0.95,1.26-2.17,1.26-3.5c0-3.04-2.46-5.5-5.5-5.5c-1.71,0-3.24,0.78-4.24,2L28.4,4.74	c3.59,1.22,6.53,3.91,8.17,7.38L28.24,22z"
+                ></path>
+              </svg>
+              Our Location
+            </h4>
+            <p>
+              <strong>Meghana Rental Dresses</strong><br />
+              1-4-289/1, RTC Workshop Road<br />
+              V D Puram, Vijayawada<br />
+              Andhra Pradesh 520012, India
+            </p>
+          </div>
+
+          <div
+            class="map-container"
+            style="
+              width: 90%;
+              aspect-ratio: 16/9;
+              margin: 0 auto;
+              margin-top: 2.5rem;
+            "
+          >
+            <iframe
+              style="width: 100%; height: 100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3823.7565271050336!2d82.98126097546386!3d16.992106798429267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37b47f7f7f7f7f%3A0x1234567890abcdef!2s1-4-289%2F1%2C%20RTC%20Workshop%20Road%2C%20V%20D%20Puram%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520012!5e0!3m2!1sen!2sin!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+
+          <p class="info-text" style="margin-top: 1rem">
+            <strong>Store Hours:</strong> Monday - Saturday: 10:00 AM - 8:00 PM
+            | Sunday: 11:00 AM - 6:00 PM
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      style="
+        background: var(--dark);
+        color: var(--gold);
+        padding: 28px 16px;
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid var(--accent);
+      "
+    >
+      <div style="max-width: 900px; margin: 0 auto">
+        <h1 style="margin: 0 16px 10px; font-weight: 600; letter-spacing: 1px">
+          Meghana Rental Dresses
+        </h1>
+        <p style="margin: 0; color: var(--accent-2); font-size: 14px">
+          Bridal • Party Wear • Jewellery Rentals — Vijayawada
+        </p>
+        <div
+          style="
+            margin: 14px 0;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+          "
+        >
+          <a
+            href="https://www.instagram.com/meghanarentaldresses/?hl=en"
+            target="_blank"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Instagram</a
+          >
+          <a
+            href="https://www.youtube.com/@rentaldressvijayawada"
+            target="_blank"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Youtube</a
+          >
+          <!-- <a
+            href="https://www.instagram.com/meghanarentaljewellers/"
+            target="_blank"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Jewellery Page</a
+          > -->
+          <a
+            href="./contact.html"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Contact</a
+          >
+        </div>
+        <p style="margin-top: 12px; font-size: 13px; color: #ccc">
+          ©️ 2025 Meghana Rental Dresses. All Rights Reserved.
+        </p>
+        <p style="margin-top: 12px; font-size: 13px; color: #cccccc7d">
+          Designed & Developed by
+          <a href="https://nivinex.vercel.app/" style="color: #cccccc7d"
+            >Nivinex Team</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Contact information - Update this number as needed
+      const num = "8801722428"; // Phone number without country code
+      const email = "info@meghanadresses.com";
+      const address =
+        "1-4-289/1, RTC Workshop Road, V D Puram, Vijayawada, Andhra Pradesh 520012";
+
+      const contactMethods = [
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+      <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
+      </svg>`,
+          title: "WhatsApp",
+          description: "Chat with us instantly",
+          detail: `+91 ${num}`,
+          link: `https://wa.me/91${num}?text=Hello! I would like to inquire about dress rentals.`,
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<path fill="#0f0" d="M13,42h22c3.866,0,7-3.134,7-7V13c0-3.866-3.134-7-7-7H13c-3.866,0-7,3.134-7,7v22	C6,38.866,9.134,42,13,42z"></path><path fill="#fff" d="M35.45,31.041l-4.612-3.051c-0.563-0.341-1.267-0.347-1.836-0.017c0,0,0,0-1.978,1.153	c-0.265,0.154-0.52,0.183-0.726,0.145c-0.262-0.048-0.442-0.191-0.454-0.201c-1.087-0.797-2.357-1.852-3.711-3.205	c-1.353-1.353-2.408-2.623-3.205-3.711c-0.009-0.013-0.153-0.193-0.201-0.454c-0.037-0.206-0.009-0.46,0.145-0.726	c1.153-1.978,1.153-1.978,1.153-1.978c0.331-0.569,0.324-1.274-0.017-1.836l-3.051-4.612c-0.378-0.571-1.151-0.722-1.714-0.332	c0,0-1.445,0.989-1.922,1.325c-0.764,0.538-1.01,1.356-1.011,2.496c-0.002,1.604,1.38,6.629,7.201,12.45l0,0l0,0l0,0l0,0	c5.822,5.822,10.846,7.203,12.45,7.201c1.14-0.001,1.958-0.248,2.496-1.011c0.336-0.477,1.325-1.922,1.325-1.922	C36.172,32.192,36.022,31.419,35.45,31.041z"></path>
+</svg>`,
+          title: "Phone Call",
+          description: "Call us directly",
+          detail: `+91 ${num}`,
+          link: `tel:+91${num}`,
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<path fill="#e0e0e0" d="M5.5,40.5h37c1.933,0,3.5-1.567,3.5-3.5V11.543c0-1.933-1.567-3.5-3.5-3.5h-37	c-1.933,0-3.5,1.567-3.5,3.5V37C2,38.933,3.567,40.5,5.5,40.5z"></path><path fill="#d9d9d9" d="M44.482,12.759L24,27.763L3.518,12.758c0,0-0.095-0.066-0.236-0.182L26,40.5h16.5 c1.933,0,3.5-1.567,3.5-3.5V11.441c0-0.102-0.021-0.197-0.03-0.296C45.816,12.262,44.482,12.759,44.482,12.759z"></path><path fill="#eee" d="M6.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L6.745,40.5z"></path><path fill="#e0e0e0" d="M25.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L18.771,31.616L25.745,40.5z"></path><path fill="#ca3737" d="M3.603,12.759c0,0-1.334-0.938-1.488-2.055c-0.008,0.099-0.03,0.195-0.03,0.296 L2,11.473v17.799V37c0,1.933,1.567,3.5,3.5,3.5H7V15.247L3.603,12.759z"></path><path fill="#ca3737" d="M45.97,11.145c-0.154,1.117-1.488,1.614-1.488,1.614L41,15.31V40.5h1.5 c1.933,0,3.5-1.567,3.5-3.5v-7.729v-17.83C46,11.34,45.979,11.244,45.97,11.145z"></path><path fill="#bcbcbc" d="M3.42,13.31l20.623,14.973L44.665,13.31c0,0,0.937-0.661,1.335-1.531v-0.228	c-0.012-1.996-1.569-3.51-3.5-3.5h-37c-1.933,0-3.5,1.567-3.5,3.5v0.009C2.323,12.536,3.42,13.31,3.42,13.31z"></path><g><path fill="#f5f5f5" d="M42.5,8H24H5.5C3.567,8,2,9.536,2,11.5c0,1.206,1.518,2.258,1.518,2.258L24,28.256 l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.536,44.433,8,42.5,8z"></path><path fill="#e84f4b" d="M43.246,8.082L24,21.5L4.754,8.082C3.18,8.419,2,9.797,2,11.5 c0,1.206,1.518,2.258,1.518,2.258L24,28.256l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.797,44.82,8.419,43.246,8.082z"></path></g>
+</svg>`,
+          title: "Email",
+          description: "Send us an email",
+          detail: email,
+          link: `mailto:${email}?subject=Inquiry about Dress Rental&body=Hello,%0D%0A%0D%0AI would like to inquire about...`,
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+<path fill="#48b564" d="M35.76,26.36h0.01c0,0-3.77,5.53-6.94,9.64c-2.74,3.55-3.54,6.59-3.77,8.06	C24.97,44.6,24.53,45,24,45s-0.97-0.4-1.06-0.94c-0.23-1.47-1.03-4.51-3.77-8.06c-0.42-0.55-0.85-1.12-1.28-1.7L28.24,22l8.33-9.88	C37.49,14.05,38,16.21,38,18.5C38,21.4,37.17,24.09,35.76,26.36z"></path><path fill="#fcc60e" d="M28.24,22L17.89,34.3c-2.82-3.78-5.66-7.94-5.66-7.94h0.01c-0.3-0.48-0.57-0.97-0.8-1.48L19.76,15	c-0.79,0.95-1.26,2.17-1.26,3.5c0,3.04,2.46,5.5,5.5,5.5C25.71,24,27.24,23.22,28.24,22z"></path><path fill="#2c85eb" d="M28.4,4.74l-8.57,10.18L13.27,9.2C15.83,6.02,19.69,4,24,4C25.54,4,27.02,4.26,28.4,4.74z"></path><path fill="#ed5748" d="M19.83,14.92L19.76,15l-8.32,9.88C10.52,22.95,10,20.79,10,18.5c0-3.54,1.23-6.79,3.27-9.3	L19.83,14.92z"></path><path fill="#5695f6" d="M28.24,22c0.79-0.95,1.26-2.17,1.26-3.5c0-3.04-2.46-5.5-5.5-5.5c-1.71,0-3.24,0.78-4.24,2L28.4,4.74	c3.59,1.22,6.53,3.91,8.17,7.38L28.24,22z"></path>
+</svg>`,
+          title: "Visit Us",
+          description: "Get directions",
+          detail: "V D Puram, Vijayawada",
+          link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            address
+          )}`,
+        },
+      ];
+
+      // Generate contact cards
+      const contactMethodsContainer = document.getElementById("contactMethods");
+      contactMethods.forEach((method) => {
+        const card = document.createElement("div");
+        card.className = "contact-card";
+        card.innerHTML = `
+                <a href="${method.link}" class="contact-card-link" target="${
+          method.title === "Email" ? "_self" : "_blank"
+        }" rel="noopener noreferrer">
+                  <span class="contact-icon">${method.icon}</span>
+                  <h3>${method.title}</h3>
+                  <p>${method.description}</p>
+                  <p class="contact-detail">${method.detail}</p>
+                </a>
+              `;
+        contactMethodsContainer.appendChild(card);
+      });
+    </script>
+  </body>
 </html>

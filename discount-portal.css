@@ -1,0 +1,112 @@
+/* ========== MAIN CONTAINER ========== */
+#discount-portal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  .glass-card {
+    position: relative;
+    width: 90vw;
+    max-width: 500px;
+    height: 70vh;
+    padding: 2rem;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Low-opacity logo overlay */
+  .glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("./logo.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.50; /* Adjust intensity */
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ensure content stays above overlay */
+  .glass-card > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ========== CLOSE BUTTON ========== */
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: gold;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* ========== HERO CARD CONTENT ========== */
+  .hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    font-family: sans-serif;
+  }
+
+  .hero-card h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .hero-card p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  .discount-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (min-width: 768px) {
+    .glass-card {
+      height: 80vh;
+    }
+
+    .hero-card h3 {
+      font-size: 3rem;
+    }
+
+    .p1 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* ========== GLASS CARD ========== */

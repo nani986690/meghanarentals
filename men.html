@@ -1,169 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#fff6e6" />
-  <title>Meghana Bridal Dresses - Men’s Wear</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Meghana Rental Dresses" class="site-logo" />
-      <span>Meghana Bridal Dresses</span>
-    </div>
-    <nav>
-      <a href="index.html">WOMEN'S WEAR</a>
-      <a href="men.html" class="active">MEN'S WEAR</a>
-      <a href="about.html">ABOUT</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff6e6" />
+    <title>Meghana Bridal Dresses - Men’s Wear</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./added-styles.css" />
+  </head>
+  <body class="smen-html">
+    <div id="modal-root"></div>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Meghana Rental Dresses" class="site-logo" />
+        <span>
+          <span class="stext-hero-w">Meghana </span>
+          <span class="stext-hero-w">Bridal </span>
+          <span class="stext-hero-w">Dresses</span>
+        </span>
+      </div>
+      <nav>
+        <a href="index.html">WOMEN'S WEAR</a>
+        <a href="men.html" class="active">MEN'S WEAR</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
 
-  <main>
-    <h2>MEN'S WEAR</h2>
-    <div id="menProducts" class="product-grid">
-      <div class="product-card" data-price="1850">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362398.jpg" alt="Classic Black Suit" />
-        <div class="content">
-          <h3>Classic Black Suit</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 1,850</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m1">Add</button>
-            </div>
-          </div>
-        </div>
+    <main>
+      <section class="filters sfilter">
+        <h2>FILTER PRODUCTS</h2>
+        <label>
+          Price:
+          <select id="priceFilter">
+            <option value="all" selected>All</option>
+            <option value="1000">Under ₹1000</option>
+            <option value="2000">₹1000 to ₹2000</option>
+            <option value="3000">₹2000 to ₹3000</option>
+            <option value="4000">₹3000 to ₹4000</option>
+            <option value="5000">₹4000 to ₹5000</option>
+          </select>
+        </label>
+      </section>
+      <div class="stitle-wrapper">
+        <h1 class="stitle">MEN'S WEAR</h1>
       </div>
-      <div class="product-card" data-price="2450">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362402.jpg" alt="Pink Brocade Sherwani" />
-        <div class="content">
-          <h3>Pink Brocade Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 2,450</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m2">Add</button>
-            </div>
-          </div>
-        </div>
+      <div id="menProducts" class="product-grid">
+        <div class="sno-items">Loading...</div>
       </div>
-      <div class="product-card" data-price="1200">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362401.jpg" alt="Navy Blue Sherwani" />
-        <div class="content">
-          <h3>Navy Blue Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 1,200</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m3">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card" data-price="2800">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362383.jpg" alt="Gold Work Sherwani" />
-        <div class="content">
-          <h3>Gold Work Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 2,800</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m4">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card" data-price="1650">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362399.jpg" alt="Beige Wedding Sherwani" />
-        <div class="content">
-          <h3>Beige Wedding Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 1,650</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m5">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card" data-price="2100">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362398.jpg" alt="Maroon Sherwani" />
-        <div class="content">
-          <h3>Maroon Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 2,100</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m6">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card" data-price="1350">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362398.jpg" alt="Designer Sherwani" />
-        <div class="content">
-          <h3>Designer Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 1,350</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m7">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card" data-price="2950">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362402.jpg" alt="Royal Blue Sherwani" />
-        <div class="content">
-          <h3>Royal Blue Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 2,950</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m8">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card" data-price="1750">
-        <img src="https://uploads.onecompiler.io/444nf76ns/444nf7ycu/1000362398.jpg" alt="Embroidered Sherwani" />
-        <div class="content">
-          <h3>Embroidered Sherwani</h3>
-          <div class="price-row">
-            <div>
-              <div class="mrp">Rs. <s>3,000</s></div>
-              <div class="price">Rs. 1,750</div>
-            </div>
-            <div class="actions">
-              <button class="btn btn-primary add-cart-btn" data-id="m9">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <a href="cart.html" id="openCartBtn" class="open-cart-btn">Cart (0)</a>
+    <footer
+      style="
+        background: var(--dark);
+        color: var(--gold);
+        padding: 28px 16px;
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid var(--accent);
+      "
+    >
+      <div style="max-width: 900px; margin: 0 auto">
+        <h1 style="margin: 0 16px 10px; font-weight: 600; letter-spacing: 1px">
+          Meghana Rental Dresses
+        </h1>
+        <p style="margin: 0; color: var(--accent-2); font-size: 14px">
+          Bridal • Party Wear • Jewellery Rentals — Vijayawada
+        </p>
+        <div
+          style="
+            margin: 14px 0;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+          "
+        >
+          <a
+            href="https://www.instagram.com/meghanarentaldresses/?hl=en"
+            target="_blank"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Instagram</a
+          >
+              <a
+            href="https://www.youtube.com/@rentaldressvijayawada"
+            target="_blank"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Youtube</a
+          >
+          <!-- <a
+            href="https://www.instagram.com/meghanarentaljewellers/"
+            target="_blank"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Jewellery Page</a
+          > -->
+          <a
+            href="./contact.html"
+            style="color: var(--gold); text-decoration: none; font-size: 14px"
+            >Contact</a
+          >
+        </div>
+        <p style="margin-top: 12px; font-size: 13px; color: #ccc">
+          ©️ 2025 Meghana Rental Dresses. All Rights Reserved.
+        </p>
+        <p style="margin-top: 12px; font-size: 13px; color: #cccccc7d">
+          Designed & Developed by <a href="https://nivinex.vercel.app/" style="color: #cccccc7d;" >Nivinex Team</a>
+        </p>
+      </div>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <a href="cart.html" id="openCartBtn" class="open-cart-btn">Cart (0)</a>
+
+    <script src="script.js" type="module"></script>
+    <script src="./smen-script.js" type="module"></script>
+  </body>
 </html>
