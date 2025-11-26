@@ -511,6 +511,9 @@ nav a:hover {
     grid-template-columns: 1fr;
     gap: 14px;
   }
+  #priceFilter {
+    margin-right: 0.7cm;
+  }
   .hero-section {
     height: 220px;
   }
