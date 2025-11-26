@@ -1,5 +1,7 @@
 import { portal } from "./portal.js";
-import { womenProducts } from "./data.js";
+import { womenProducts, menProducts } from "./data.js";
+import { renderByPagination } from "./pagination.js";
+import { initAdvancedProductObserver } from "./observer.js";
 
 // Cart array - load from localStorage or new
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -105,8 +107,6 @@ function addToCart(id) {
   saveCart();
   updateCartDisplayCount();
   portal("Item added to cart");
-  renderProducts(womenProducts, "products");
-  renderProducts(menProducts, "menProducts");
   // window.location.href = "cart.html";
 }
 
@@ -241,13 +241,24 @@ document.addEventListener("click", function (e) {
 
 // Init
 document.addEventListener("DOMContentLoaded", () => {
-  renderProducts(womenProducts, "products");
+  // Initialize Intersection Observer for product tracking
+  const productObserver = initAdvancedProductObserver();
+  renderByPagination("products", 9, false, () => productObserver.reobserveCards());
+  // Ensure observer attaches to the initially rendered cards
+  productObserver.reobserveCards();
   updateCartDisplayCount();
   renderCartItems();
 
   const priceFilter = document.getElementById("priceFilter");
   if (priceFilter)
-    priceFilter.addEventListener("change", () =>
-      renderProducts(womenProducts, "products")
-    );
+    priceFilter.addEventListener("change", () => {
+      renderByPagination("products", 9, false, () => productObserver.reobserveCards());
+      productObserver.reobserveCards();
+    });
+  const nameFilter = document.getElementById("nameFilter");
+  if (nameFilter)
+    nameFilter.addEventListener("change", () => {
+      renderByPagination("products", 9, false, () => productObserver.reobserveCards());
+      productObserver.reobserveCards();
+    });
 });

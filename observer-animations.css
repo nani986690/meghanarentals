@@ -1,0 +1,48 @@
+/* Product Card Entrance Animations */
+.product-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.product-card.card-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger effect for cards */
+.product-card:nth-child(1).card-visible {
+    transition-delay: 0s;
+}
+
+.product-card:nth-child(2).card-visible {
+    transition-delay: 0.1s;
+}
+
+.product-card:nth-child(3).card-visible {
+    transition-delay: 0.2s;
+}
+
+.product-card:nth-child(4).card-visible {
+    transition-delay: 0.3s;
+}
+
+.product-card:nth-child(5).card-visible {
+    transition-delay: 0.4s;
+}
+
+.product-card:nth-child(6).card-visible {
+    transition-delay: 0.5s;
+}
+
+.product-card:nth-child(7).card-visible {
+    transition-delay: 0.6s;
+}
+
+.product-card:nth-child(8).card-visible {
+    transition-delay: 0.7s;
+}
+
+.product-card:nth-child(9).card-visible {
+    transition-delay: 0.8s;
+}
