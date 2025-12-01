@@ -83,10 +83,10 @@ function addToCart(id) {
   // Find product in womenProducts
   let product = womenProducts.find((p) => p.id === id);
 
-  // If not found, try to read from DOM (men.html uses #menProducts)
+  // If not found, try to read from DOM (men.html uses #menProducts, prewedding-shoot.html uses #preweddingProducts)
   if (!product) {
     const card = document
-      .querySelector(`#menProducts button[data-id=\"${id}\"]`)
+      .querySelector(`#menProducts button[data-id=\"${id}\"], #preweddingProducts button[data-id=\"${id}\"]`)
       ?.closest(".product-card");
     if (card) {
       product = {

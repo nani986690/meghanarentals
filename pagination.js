@@ -1,4 +1,4 @@
-import { womenProducts, menProducts } from "./data.js"
+import { womenProducts, menProducts, preweddingShootProducts } from "./data.js"
 
 export const createChunks = (array, size) => {
     const chunks = [];
@@ -71,8 +71,13 @@ function applyPriceFilter(products) {
     return filtered;
 }
 
-export const renderByPagination = (target, count=9, isMen=false, observerCallback=null) => {
-    const products = isMen ? menProducts : womenProducts;
+export const renderByPagination = (target, count=9, isMen=false, observerCallback=null, customProducts=null) => {
+    let products;
+    if (customProducts) {
+        products = customProducts;
+    } else {
+        products = isMen ? menProducts : womenProducts;
+    }
     
     // Store observer callback for pagination clicks
     paginationState.observerCallback = observerCallback;
